@@ -1,0 +1,6 @@
+[submodule "vendor/status-keyacrd-go"]
+	path = vendor/status-keycard-go
+	url = https://github.com/status-im/status-keycard-go
+[submodule "vendor/status-go"]
+	path = vendor/status-go
+	url = https://github.com/status-im/status-go
