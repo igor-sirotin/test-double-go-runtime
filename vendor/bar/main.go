@@ -15,6 +15,8 @@ var initOnce sync.Once
 //export InitializeBar
 func InitializeBar() {
 	initOnce.Do(func() {
+		defer recover()
+
 		fmt.Println("👉 bar: Go runtime initialization starting")
 		defer fmt.Println("✅ bar: Go runtime initialization complete")
 
@@ -28,8 +30,6 @@ func InitializeBar() {
 			close(done)
 		}()
 		<-done
-
-		fmt.Println("bar: Go runtime initialization complete")
 	})
 }
 
